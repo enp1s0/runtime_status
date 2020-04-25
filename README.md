@@ -18,5 +18,5 @@ int main() {
 ```
 
 ```bash
-g++ -DRS_GIT_BRANCH="\"$(shell git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_COMMIT="\"$(shell git rev-parse HEAD)\"" main.cpp -std=c++11
+g++ -DRS_GIT_BRANCH="\"$(git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_COMMIT="\"$(git rev-parse HEAD)\"" main.cpp -std=c++11
 ```
