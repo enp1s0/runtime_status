@@ -3,4 +3,5 @@
 
 int main() {
 	mtk::runtime_status::print_process_info();
+	mtk::runtime_status::print_process_using_memory();
 }
