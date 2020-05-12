@@ -29,5 +29,6 @@ g++ -DRS_GIT_BRANCH="\"$(git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_
 
 int main() {
 	mtk::runtime_status::process::print_info();
+	mtk::runtime_status::process::print_using_memory_size();
 }
 ```
