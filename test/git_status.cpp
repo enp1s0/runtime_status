@@ -1,6 +1,6 @@
 #include <iostream>
-#include <runtime_status.hpp>
+#include <git_status.hpp>
 
 int main() {
-	mtk::runtime_status::print_git_info();
+	mtk::runtime_status::git::print_info();
 }

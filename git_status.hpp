@@ -12,11 +12,13 @@
 
 namespace mtk {
 namespace runtime_status {
-inline void print_git_info() {
+namespace git {
+inline void print_info() {
 	std::printf("# git information\n");
 	std::printf("%10s : %s\n", "commit", RS_GIT_COMMIT);
 	std::printf("%10s : %s\n", "branch", RS_GIT_BRANCH);
 }
+} // namespace git
 } // namespace runtime_status
 } // namespace mtk
 
