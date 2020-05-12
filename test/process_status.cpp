@@ -2,6 +2,6 @@
 #include <process_status.hpp>
 
 int main() {
-	mtk::runtime_status::print_process_info();
-	mtk::runtime_status::print_process_using_memory();
+	mtk::runtime_status::process::print_info();
+	mtk::runtime_status::process::print_using_memory_size();
 }
