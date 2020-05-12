@@ -5,7 +5,8 @@
 
 namespace mtk {
 namespace runtime_status {
-void print_process_info() {
+namespace process {
+void print_info() {
 	proc_status::proc_status proc_status;
 	proc_status.load_self_info();
 
@@ -14,13 +15,14 @@ void print_process_info() {
 	std::printf("%10s : %s\n", "State", proc_status.get_State().c_str());
 }
 
-void print_process_using_memory() {
+void print_using_memory_size() {
 	proc_status::proc_status proc_status;
 	proc_status.load_self_info();
 
 	std::printf("# process information\n");
 	std::printf("%10s : %u\n", "Vmem", proc_status.get_VmSize());
 }
+} // namespace process
 } // namespace runtime_status
 } // namespace mtk
 #endif /* end of include guard */
