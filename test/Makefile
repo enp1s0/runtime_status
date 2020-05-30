@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-std=c++11 -I../include
+CXXFLAGS=-std=c++11 -I../
 TARGETS=git_status.test process_status.test
 
 all: $(TARGETS)
