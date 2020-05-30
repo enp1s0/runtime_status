@@ -1,7 +1,7 @@
 #ifndef __PROCESS_STATUS_HPP__
 #define __PROCESS_STATUS_HPP__
 
-#include "proc-status/proc_status.hpp"
+#include "../proc-status/proc_status.hpp"
 
 namespace mtk {
 namespace runtime_status {
