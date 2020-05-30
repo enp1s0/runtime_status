@@ -1,5 +1,5 @@
-#ifndef __PROCESS_STATUS_HPP__
-#define __PROCESS_STATUS_HPP__
+#ifndef __REGISTER_PREFIX__UNTIME_STATUS_PROCESS_HPP__
+#define __REGISTER_PREFIX__UNTIME_STATUS_PROCESS_HPP__
 
 #include "../proc-status/proc_status.hpp"
 
