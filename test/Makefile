@@ -1,6 +1,7 @@
 CXX=g++
+NVCC=nvcc
 CXXFLAGS=-std=c++11 -I../
-TARGETS=git_status.test process_status.test
+TARGETS=git_status.test process_status.test cuda_status.test
 
 all: $(TARGETS)
 
@@ -9,6 +10,9 @@ git_status.test : git_status.cpp
 
 process_status.test : process_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS)
+
+cuda_status.test : cuda_status.cpp
+	$(NVCC) $< -o $@ $(CXXFLAGS)
 
 clean:
 	rm -f $(TARGETS)
