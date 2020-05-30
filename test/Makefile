@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-std=c++11 -I../
+CXXFLAGS=-std=c++11 -I../include
 TARGETS=git_status.test process_status.test
 
 all: $(TARGETS)
@@ -9,3 +9,6 @@ git_status.test : git_status.cpp
 
 process_status.test : process_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS)
+
+clean:
+	rm -f $(TARGETS)
