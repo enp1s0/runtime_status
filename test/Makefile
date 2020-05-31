@@ -9,10 +9,6 @@ HIP_INC=$(HIPPATH)/include
 HIP_LIB=$(HIPPATH)/lib
 HIPFLAGS=-I$(HIP_INC) -L$(HIP_LIB) $(CXXFLAGS)
 
-TARGETS=git_status.test process_status.test cuda_status.test
-
-all: $(TARGETS)
-
 git_status.test : git_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS) -DRS_GIT_BRANCH="\"$(shell git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_COMMIT="\"$(shell git rev-parse HEAD)\""
 
@@ -26,4 +22,4 @@ hip_status.test : hip_status.cpp
 	$(HIPCC) $< -o $@ $(HIPFLAGS)
 
 clean:
-	rm -f $(TARGETS)
+	rm -f *.test
