@@ -1,5 +1,6 @@
 #ifndef __RUNTIME_STATUS_CUDA_HPP__
 #define __RUNTIME_STATUS_CUDA_HPP__
+#include <hip/hip_runtime.h>
 #include <iostream>
 
 namespace mtk {
