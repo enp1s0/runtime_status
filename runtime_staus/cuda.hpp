@@ -23,8 +23,8 @@ inline void print_info(const bool print_header = false) {
 		std::printf("%10s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
 	}
 }
-} // namespace mtk
 } // namespace cuda
 } // namespace runtime_status
+} // namespace mtk
 
 #endif /* end of include guard */
