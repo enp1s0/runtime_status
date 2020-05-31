@@ -13,7 +13,7 @@ inline void print_info(const bool print_header = false) {
 	int num_device;
 	hipGetDeviceCount(&num_device);
 	for(int i = 0; i < num_device; i++){
-		hipDeviceProp property;
+		hipDeviceProp_t property;
 		hipGetDeviceProperties(&property, i);
 		std::printf("## -- Device %d\n", i);
 		std::printf("%10s : %s\n", "Name", property.name);
