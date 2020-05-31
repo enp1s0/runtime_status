@@ -3,7 +3,7 @@
 ## Supported
 
 - [ ] CPU
-- [x] GPU (CUDA)
+- [x] GPU (CUDA, HIP)
 - [x] git
 - [x] process
 
