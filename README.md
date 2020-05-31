@@ -31,12 +31,25 @@ int main() {
 	mtk::runtime_status::process::print_info();
 	mtk::runtime_status::process::print_using_memory_size();
 }
+
 ```
+
+### GPU (CUDA)
 
 ```cpp
 #include <runtime_status/cuda.hpp>
 
 int main() {
 	mtk::runtime_status::cuda::print_info();
+}
+```
+
+### GPU (HIP)
+
+```cpp
+#include <runtime_status/hip.hpp>
+
+int main() {
+	mtk::runtime_status::hip::print_info();
 }
 ```
