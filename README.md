@@ -3,7 +3,7 @@
 ## Supported
 
 - [ ] CPU
-- [ ] GPU
+- [x] GPU (CUDA)
 - [x] git
 - [x] process
 
@@ -11,7 +11,7 @@
 ### git
 
 ```cpp
-#include <git_status.hpp>
+#include <runtime_status/git.hpp>
 
 int main() {
 	mtk::runtime_status::git::print_info();
@@ -25,10 +25,18 @@ g++ -DRS_GIT_BRANCH="\"$(git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_
 ### process
 
 ```cpp
-#include <process_status.hpp>
+#include <runtime_status/process.hpp>
 
 int main() {
 	mtk::runtime_status::process::print_info();
 	mtk::runtime_status::process::print_using_memory_size();
+}
+```
+
+```cpp
+#include <runtime_status/cuda.hpp>
+
+int main() {
+	mtk::runtime_status::cuda::print_info();
 }
 ```

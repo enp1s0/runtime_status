@@ -1,5 +1,5 @@
-#ifndef __RUNTIME_STATUS_HPP__
-#define __RUNTIME_STATUS_HPP__
+#ifndef __RUNTIME_STATUS_GIT_HPP__
+#define __RUNTIME_STATUS_GIT_HPP__
 #include <iostream>
 #include <cstdlib>
 
