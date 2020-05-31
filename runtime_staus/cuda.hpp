@@ -2,7 +2,6 @@
 #define __RUNTIME_STATUS_CUDA_HPP__
 #include <cuda_runtime_api.h>
 #include <iostream>
-#include <vector>
 
 namespace mtk {
 namespace runtime_status {
