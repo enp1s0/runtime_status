@@ -1,5 +1,5 @@
 #include <iostream>
-#include <runtime_staus/hip_status.hpp>
+#include <runtime_staus/hip.hpp>
 
 constexpr bool print_header = true;
 
