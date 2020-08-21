@@ -16,10 +16,10 @@ inline void print_info(const bool print_header = false) {
 		cudaDeviceProp property;
 		cudaGetDeviceProperties(&property, i);
 		std::printf("## -- Device %d\n", i);
-		std::printf("%10s : %s\n", "Name", property.name);
-		std::printf("%10s : %d.%d\n", "CC", property.major, property.minor);
-		std::printf("%10s : %d [kHz]\n", "Clock", property.clockRate);
-		std::printf("%10s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
+		std::printf("%13s : %s\n", "Name", property.name);
+		std::printf("%13s : %d.%d\n", "CC", property.major, property.minor);
+		std::printf("%13s : %d [kHz]\n", "Clock", property.clockRate);
+		std::printf("%13s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
 	}
 }
 
@@ -28,8 +28,8 @@ inline void print_current_device_id(const bool print_header = false) {
 		std::printf("# CUDA information\n");
 	}
 	int device_id;
-	cudaGetDeviceId(&device_id);
-	std::printf("%10s : %d\n", "Using GPU", device_id);
+	cudaGetDevice(&device_id);
+	std::printf("%13s : %d\n", "Using GPU ID", device_id);
 }
 } // namespace cuda
 } // namespace runtime_status
