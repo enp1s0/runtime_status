@@ -16,10 +16,19 @@ inline void print_info(const bool print_header = false) {
 		hipDeviceProp_t property;
 		hipGetDeviceProperties(&property, i);
 		std::printf("## -- Device %d\n", i);
-		std::printf("%10s : %s\n", "Name", property.name);
-		std::printf("%10s : %d [kHz]\n", "Clock", property.clockRate);
-		std::printf("%10s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
+		std::printf("%13s : %s\n", "Name", property.name);
+		std::printf("%13s : %d [kHz]\n", "Clock", property.clockRate);
+		std::printf("%13s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
 	}
+}
+
+inline void print_current_device_id(const bool print_header = false) {
+	if (print_header) {
+		std::printf("# HIP information\n");
+	}
+	int device_id;
+	hipGetDevice(&device_id);
+	std::printf("%13s : %d\n", "Using GPU ID", device_id);
 }
 } // namespace hip
 } // namespace runtime_status
