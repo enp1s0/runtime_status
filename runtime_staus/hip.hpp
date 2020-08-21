@@ -26,9 +26,10 @@ inline void print_current_device_id(const bool print_header = false) {
 	if (print_header) {
 		std::printf("# HIP information\n");
 	}
+	std::printf("## -- Using GPU ID\n");
 	int device_id;
 	hipGetDevice(&device_id);
-	std::printf("%13s : %d\n", "Using GPU ID", device_id);
+	std::printf("%13s : %d\n", "ID", device_id);
 }
 } // namespace hip
 } // namespace runtime_status
