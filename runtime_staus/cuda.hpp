@@ -22,6 +22,15 @@ inline void print_info(const bool print_header = false) {
 		std::printf("%10s : %e [GB]\n", "Memory", property.totalGlobalMem / static_cast<float>(1lu << 30));
 	}
 }
+
+inline void print_current_device_id(const bool print_header = false) {
+	if (print_header) {
+		std::printf("# CUDA information\n");
+	}
+	int device_id;
+	cudaGetDeviceId(&device_id);
+	std::printf("%10s : %d\n", "Using GPU", device_id);
+}
 } // namespace cuda
 } // namespace runtime_status
 } // namespace mtk
