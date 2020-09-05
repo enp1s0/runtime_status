@@ -21,5 +21,8 @@ cuda_status.test : cuda_status.cpp
 hip_status.test : hip_status.cpp
 	$(HIPCC) $< -o $@ $(HIPFLAGS)
 
+env_status.test : env_status.cpp
+	$(CXX) $< -o $@ $(CXXFLAGS)
+
 clean:
 	rm -f *.test

@@ -6,6 +6,7 @@
 - [x] GPU (CUDA, HIP)
 - [x] git
 - [x] process
+- [x] env
 
 ## Samples
 ### git
@@ -32,6 +33,16 @@ int main() {
 	mtk::runtime_status::process::print_using_memory_size();
 }
 
+```
+
+### Environment variable
+
+```cpp
+#include <runtime_status/env.hpp>
+
+int main() {
+	mtk::runtime_status::env::print_runtime_env("PATH");
+}
 ```
 
 ### GPU (CUDA)
