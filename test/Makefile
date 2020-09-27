@@ -24,5 +24,8 @@ hip_status.test : hip_status.cpp
 env_status.test : env_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS)
 
+date_status.test : date_status.cpp
+	$(CXX) $< -o $@ $(CXXFLAGS) -DRS_DATE_BUILD="\"$(shell date +%s)\""
+
 clean:
 	rm -f *.test

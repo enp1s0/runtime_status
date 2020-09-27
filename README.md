@@ -7,6 +7,7 @@
 - [x] git
 - [x] process
 - [x] env
+- [x] date
 
 ## Samples
 ### git
@@ -33,6 +34,19 @@ int main() {
 	mtk::runtime_status::process::print_using_memory_size();
 }
 
+```
+### date
+
+```cpp
+#include <runtime_status/date.hpp>
+
+int main() {
+	mtk::runtime_status::date::print_info();
+}
+```
+
+```bash
+g++ -DRS_DATE_BUILD="\"$(shell date +%s)\"" main.cpp -std=c++11
 ```
 
 ### Environment variable
