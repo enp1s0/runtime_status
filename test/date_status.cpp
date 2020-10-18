@@ -1,5 +1,5 @@
 #include <iostream>
-#include <runtime_staus/date.hpp>
+#include <runtime_status/date.hpp>
 
 constexpr bool print_header = true;
 

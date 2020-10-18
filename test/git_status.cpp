@@ -1,5 +1,5 @@
 #include <iostream>
-#include <runtime_staus/git.hpp>
+#include <runtime_status/git.hpp>
 
 constexpr bool print_header = true;
 
