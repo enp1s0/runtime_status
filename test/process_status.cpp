@@ -1,5 +1,5 @@
 #include <iostream>
-#include <runtime_staus/process.hpp>
+#include <runtime_status/process.hpp>
 
 constexpr bool print_header = true;
 

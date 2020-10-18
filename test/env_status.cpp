@@ -1,5 +1,5 @@
 #include <iostream>
-#include <runtime_staus/env.hpp>
+#include <runtime_status/env.hpp>
 
 constexpr bool print_header = true;
 
