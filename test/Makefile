@@ -3,11 +3,7 @@ CXXFLAGS=-std=c++11 -I../
 # CUDA
 NVCC=nvcc
 # HIP
-HIPPATH=/opt/rocm/hip
-HIPCC=$(HIPPATH)/bin/hipcc
-HIP_INC=$(HIPPATH)/include
-HIP_LIB=$(HIPPATH)/lib
-HIPFLAGS=-I$(HIP_INC) -L$(HIP_LIB) $(CXXFLAGS)
+HIPCC=hipcc
 
 git_status.test : git_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS) -DRS_GIT_BRANCH="\"$(shell git branch | grep '\*' | sed -e 's/.* //')\"" -DRS_GIT_COMMIT="\"$(shell git rev-parse HEAD)\""
@@ -19,7 +15,7 @@ cuda_status.test : cuda_status.cpp
 	$(NVCC) $< -o $@ $(CXXFLAGS)
 
 hip_status.test : hip_status.cpp
-	$(HIPCC) $< -o $@ $(HIPFLAGS)
+	$(HIPCC) $< -o $@ $(CXXFLAGS)
 
 env_status.test : env_status.cpp
 	$(CXX) $< -o $@ $(CXXFLAGS)
